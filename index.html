@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ayan Atif | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+            padding: 25px 20px;
+        }
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 35px 0 25px 0;
+            border-bottom: 1px solid #334155;
+        }
+        h1 {
+            font-size: 2.4rem;
+            color: #38bdf8;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+        p.subtitle {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+        .social-links {
+            margin-top: 15px;
+        }
+        .social-links a {
+            color: #38bdf8;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .social-links a:hover {
+            color: #7dd3fc;
+            text-decoration: underline;
+        }
+        section {
+            padding: 28px 0;
+            border-bottom: 1px solid #334155;
+        }
+        h2 {
+            color: #f1f5f9;
+            margin-bottom: 22px;
+            font-size: 1.7rem;
+            border-left: 4px solid #38bdf8;
+            padding-left: 12px;
+        }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-card {
+            background: #1e293b;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.92rem;
+            color: #e2e8f0;
+            border: 1px solid #475569;
+        }
+        .project-card {
+            background: #1e293b;
+            padding: 22px;
+            border-radius: 10px;
+            margin-bottom: 22px;
+            border: 1px solid #334155;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        .project-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+        .project-card p {
+            color: #cbd5e1;
+            font-size: 0.96rem;
+            margin-bottom: 14px;
+            line-height: 1.65;
+        }
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .tag {
+            background: #0f172a;
+            color: #38bdf8;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid #1e293b;
+        }
+        footer {
+            text-align: center;
+            padding: 25px 0 10px 0;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Muhammad Ayan Atif</h1>
+            <p class="subtitle">Python Programmer | Web Developer | Automation Specialist</p>
+            <div class="social-links">
+                <a href="https://github.com" target="_blank">GitHub Profile</a> | 
+                <a href="https://linkedin.com" target="_blank">LinkedIn Profile</a>
+            </div>
+        </header>
+
+        <!-- About Me -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am an Intermediate ICS student at GCU Lahore focused on practical software execution and low-code workflow automation. I specialize in building logical Python applications, structured web pages using HTML and CSS, and automated data pipelines in n8n to streamline database management and administrative tasks.</p>
+        </section>
+
+        <!-- Technical Stack -->
+        <section id="skills">
+            <h2>Technical Stack</h2>
+            <div class="skills-grid">
+                <div class="skill-card">Python (Control Flow, Data Validation)</div>
+                <div class="skill-card">File I/O & Exception Handling</div>
+                <div class="skill-card">HTML5 & CSS3 Page Design</div>
+                <div class="skill-card">n8n Automation Engine</div>
+                <div class="skill-card">Airtable Database Management</div>
+                <div class="skill-card">Gmail Integration</div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+
+            <!-- Project 1 (Updated as per actual n8n workflow image/description) -->
+            <div class="project-card">
+                <h3>1. Automated Applicant Screening & AI Rating System</h3>
+                <p>An automated n8n recruitment workflow that captures job application form submissions and creates a preliminary entry in Airtable. A Switch node filters candidates by applied positions (Software Engineer, AI Engineer, Video Editor, Coder). The applicant data is passed to an AI Agent powered by Google Gemini, which evaluates skill demand, assigns a star rating (5-star to 2-star), and automatically updates the candidate's database record with evaluation metrics.</p>
+                <div class="tags">
+                    <span class="tag">n8n</span>
+                    <span class="tag">Airtable</span>
+                    <span class="tag">Google Gemini AI</span>
+                    <span class="tag">Switch Node</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>2. Department Admission & Pass Router</h3>
+                <p>An n8n routing workflow built for registration handling. Upon form submission, student data is recorded in Airtable, routed by department using conditional logic, and sent an automated approval pass via Gmail if criteria are met, while queuing remaining candidates for manual review.</p>
+                <div class="tags">
+                    <span class="tag">n8n</span>
+                    <span class="tag">Airtable</span>
+                    <span class="tag">Gmail</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <h3>3. Daily Automated Quote Dispatcher</h3>
+                <p>A scheduled automation workflow running daily at 8:00 AM using a Cron Trigger. It fetches dynamic inspirational quotes from an AI model, queries subscriber records in Airtable, and delivers personalized emails to users automatically via Gmail.</p>
+                <div class="tags">
+                    <span class="tag">n8n</span>
+                    <span class="tag">Cron Trigger</span>
+                    <span class="tag">Gemini AI</span>
+                    <span class="tag">Gmail</span>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <h3>4. Student Grade & Performance Analyzer</h3>
+                <p>A structured Python script that accepts student details and subject marks. It features input validation using `try-except` blocks to prevent negative or invalid inputs, calculates average scores, determines letter grades, and outputs a clean text summary.</p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Exception Handling</span>
+                    <span class="tag">CLI</span>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card">
+                <h3>5. File-Based CLI Password Vault</h3>
+                <p>A command-line security tool in Python for storing and retrieving account credentials. It utilizes native file handling (`open/write/read`) to store data in local text files while handling file-access errors using `try-except` blocks.</p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">File Handling</span>
+                    <span class="tag">CLI</span>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card">
+                <h3>6. StudyHub Educational Web Portal</h3>
+                <p>A multi-section responsive landing page built with HTML and CSS. Features a structured layout, navigation header, subject listing, pricing table, custom typography via Google Fonts, and a functional contact layout.</p>
+                <div class="tags">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">Web Design</span>
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="project-card">
+                <h3>7. Developer Profile UI Card Component</h3>
+                <p>A clean UI component built using HTML and custom CSS to display developer details. Demonstrates box model styling, border-radius, outline offsets, text-shadows, and box-shadow styling.</p>
+                <div class="tags">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">UI Design</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Muhammad Ayan Atif | Built with HTML & CSS</p>
+        </footer>
+    </div>
+
+</body>
+</html>

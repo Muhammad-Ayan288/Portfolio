@@ -1,243 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Ayan Atif | Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #0f172a;
-            color: #f8fafc;
-            line-height: 1.6;
-            padding: 25px 20px;
-        }
-        .container {
-            max-width: 880px;
-            margin: 0 auto;
-        }
-        header {
-            text-align: center;
-            padding: 35px 0 25px 0;
-            border-bottom: 1px solid #334155;
-        }
-        h1 {
-            font-size: 2.4rem;
-            color: #38bdf8;
-            margin-bottom: 6px;
-            letter-spacing: 0.5px;
-        }
-        p.subtitle {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            font-weight: 500;
-        }
-        .social-links {
-            margin-top: 15px;
-        }
-        .social-links a {
-            color: #38bdf8;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-        .social-links a:hover {
-            color: #7dd3fc;
-            text-decoration: underline;
-        }
-        section {
-            padding: 28px 0;
-            border-bottom: 1px solid #334155;
-        }
-        h2 {
-            color: #f1f5f9;
-            margin-bottom: 22px;
-            font-size: 1.7rem;
-            border-left: 4px solid #38bdf8;
-            padding-left: 12px;
-        }
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skill-card {
-            background: #1e293b;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.92rem;
-            color: #e2e8f0;
-            border: 1px solid #475569;
-        }
-        .project-card {
-            background: #1e293b;
-            padding: 22px;
-            border-radius: 10px;
-            margin-bottom: 22px;
-            border: 1px solid #334155;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
-        }
-        .project-card h3 {
-            color: #38bdf8;
-            margin-bottom: 12px;
-            font-size: 1.25rem;
-        }
-        .project-card p {
-            color: #cbd5e1;
-            font-size: 0.96rem;
-            margin-bottom: 14px;
-            line-height: 1.65;
-        }
-        .tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .tag {
-            background: #0f172a;
-            color: #38bdf8;
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border: 1px solid #1e293b;
-        }
-        footer {
-            text-align: center;
-            padding: 25px 0 10px 0;
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Ayan Atif | Developer Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    header { text-align: center; padding: 40px 0 20px; }
+    h1 { font-size: 2.2rem; color: #fff; margin-bottom: 5px; }
+    .subtitle { color: var(--accent); font-weight: 600; font-size: 1.1rem; margin-bottom: 15px; }
+    .hero-text { color: var(--text-muted); max-width: 650px; margin: 0 auto; font-size: 0.95rem; }
+    
+    section { margin-top: 40px; }
+    h2 { font-size: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 8px; margin-bottom: 20px; color: var(--accent); }
+    
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+    
+    .tech-group { margin-bottom: 15px; }
+    .tech-title { font-weight: bold; color: #fff; margin-bottom: 5px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: #0284c7; color: #fff; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; }
+    
+    .featured-card { background: #131c2e; border: 1px solid var(--accent); border-radius: 8px; padding: 22px; margin-bottom: 20px; }
+    .project-num { font-size: 0.8rem; color: var(--accent); font-weight: bold; text-transform: uppercase; }
+    .project-title { font-size: 1.25rem; margin: 5px 0; color: #fff; }
+    .why-matters { background: rgba(56, 189, 248, 0.1); border-left: 3px solid var(--accent); padding: 8px 12px; font-size: 0.85rem; margin-top: 12px; color: #e2e8f0; }
+    
+    .secondary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+    
+    .quote-box { background: var(--card-bg); border-left: 4px solid var(--accent); padding: 15px; border-radius: 0 8px 8px 0; font-style: italic; }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <h1>Muhammad Ayan Atif</h1>
-            <p class="subtitle">Python Programmer | Web Developer | Automation Specialist</p>
-            <div class="social-links">
-                <a href="https://github.com" target="_blank">GitHub Profile</a> | 
-                <a href="https://linkedin.com" target="_blank">LinkedIn Profile</a>
-            </div>
-        </header>
+  <div class="container">
+    <!-- 1. HERO SECTION -->
+    <header>
+      <h1>Muhammad Ayan Atif</h1>
+      <div class="subtitle">Python Programmer | Web Developer | Automation Specialist</div>
+      <p class="hero-text">ICS student at GCU Lahore building practical Python applications and automated systems with n8n and web technologies.</p>
+    </header>
 
-        <!-- About Me -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am an Intermediate ICS student at GCU Lahore focused on practical software execution and low-code workflow automation. I specialize in building logical Python applications, structured web pages using HTML and CSS, and automated data pipelines in n8n to streamline database management and administrative tasks.</p>
-        </section>
+    <!-- 2. TECHNICAL STACK -->
+    <section>
+      <h2>Technical Stack</h2>
+      <div class="card">
+        <div class="tech-group">
+          <div class="tech-title">Programming</div>
+          <div class="tags"><span class="tag">Python</span></div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-title">Web</div>
+          <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span></div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-title">Automation</div>
+          <div class="tags"><span class="tag">n8n</span><span class="tag">Workflow Automation</span><span class="tag">Conditional Logic</span><span class="tag">Cron/Scheduled Workflows</span></div>
+        </div>
+        <div class="tech-group">
+          <div class="tech-title">Data & Integrations</div>
+          <div class="tags"><span class="tag">Airtable</span><span class="tag">Gmail</span><span class="tag">APIs</span></div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Technical Stack -->
-        <section id="skills">
-            <h2>Technical Stack</h2>
-            <div class="skills-grid">
-                <div class="skill-card">Python (Control Flow, Data Validation)</div>
-                <div class="skill-card">File I/O & Exception Handling</div>
-                <div class="skill-card">HTML5 & CSS3 Page Design</div>
-                <div class="skill-card">n8n Automation Engine</div>
-                <div class="skill-card">Airtable Database Management</div>
-                <div class="skill-card">Gmail Integration</div>
-            </div>
-        </section>
+    <!-- 3. WHAT I BUILD SECTION -->
+    <section>
+      <h2>What I Build</h2>
+      <div class="grid-3">
+        <div class="card">
+          <div class="tech-title" style="color: var(--accent);">Automation Systems</div>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Workflow automation using n8n, APIs, conditional logic, and data systems.</p>
+        </div>
+        <div class="card">
+          <div class="tech-title" style="color: var(--accent);">Python Applications</div>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Practical CLI applications focused on logic, validation, file handling, and structured programming.</p>
+        </div>
+        <div class="card">
+          <div class="tech-title" style="color: var(--accent);">Web Interfaces</div>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Clean interfaces built with HTML and CSS.</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Projects -->
-        <section id="projects">
-            <h2>Featured Projects</h2>
+    <!-- 4. FEATURED PROJECTS (TOP 3) -->
+    <section>
+      <h2>Featured Projects</h2>
 
-            <!-- Project 1 (Updated as per actual n8n workflow image/description) -->
-            <div class="project-card">
-                <h3>1. Automated Applicant Screening & AI Rating System</h3>
-                <p>An automated n8n recruitment workflow that captures job application form submissions and creates a preliminary entry in Airtable. A Switch node filters candidates by applied positions (Software Engineer, AI Engineer, Video Editor, Coder). The applicant data is passed to an AI Agent powered by Google Gemini, which evaluates skill demand, assigns a star rating (5-star to 2-star), and automatically updates the candidate's database record with evaluation metrics.</p>
-                <div class="tags">
-                    <span class="tag">n8n</span>
-                    <span class="tag">Airtable</span>
-                    <span class="tag">Google Gemini AI</span>
-                    <span class="tag">Switch Node</span>
-                </div>
-            </div>
+      <!-- Featured Project 01 -->
+      <div class="featured-card">
+        <div class="project-num">Featured Project 01</div>
+        <div class="project-title">Automated Applicant Screening & AI Rating System</div>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Automated multi-step workflow for screening candidate data using custom conditional routing and AI integrations.</p>
+        <div class="tags" style="margin-top: 10px;">
+          <span class="tag">n8n</span><span class="tag">Airtable</span><span class="tag">Switch/Conditional Routing</span><span class="tag">Google Gemini</span><span class="tag">AI Agent</span><span class="tag">Automated Database Updates</span>
+        </div>
+        <div class="why-matters">
+          <strong>Why it matters:</strong> Demonstrates multi-step workflow automation, conditional routing, database operations, and AI integration.
+        </div>
+      </div>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <h3>2. Department Admission & Pass Router</h3>
-                <p>An n8n routing workflow built for registration handling. Upon form submission, student data is recorded in Airtable, routed by department using conditional logic, and sent an automated approval pass via Gmail if criteria are met, while queuing remaining candidates for manual review.</p>
-                <div class="tags">
-                    <span class="tag">n8n</span>
-                    <span class="tag">Airtable</span>
-                    <span class="tag">Gmail</span>
-                </div>
-            </div>
+      <!-- Featured Project 02 -->
+      <div class="featured-card">
+        <div class="project-num">Featured Project 02</div>
+        <div class="project-title">Department Admission & Pass Router</div>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Automated registration management routing form submissions based on department specifications.</p>
+        <div class="tags" style="margin-top: 10px;">
+          <span class="tag">Form Submission</span><span class="tag">Airtable</span><span class="tag">Department-Based Routing</span><span class="tag">Conditional Logic</span><span class="tag">Gmail Automation</span><span class="tag">Manual-Review Queue</span>
+        </div>
+        <div class="why-matters">
+          <strong>Why it matters:</strong> Demonstrates how a manual registration process can be converted into a structured automated workflow.
+        </div>
+      </div>
 
-            <!-- Project 3 -->
-            <div class="project-card">
-                <h3>3. Daily Automated Quote Dispatcher</h3>
-                <p>A scheduled automation workflow running daily at 8:00 AM using a Cron Trigger. It fetches dynamic inspirational quotes from an AI model, queries subscriber records in Airtable, and delivers personalized emails to users automatically via Gmail.</p>
-                <div class="tags">
-                    <span class="tag">n8n</span>
-                    <span class="tag">Cron Trigger</span>
-                    <span class="tag">Gemini AI</span>
-                    <span class="tag">Gmail</span>
-                </div>
-            </div>
+      <!-- Featured Project 03 -->
+      <div class="featured-card">
+        <div class="project-num">Featured Project 03</div>
+        <div class="project-title">Daily Automated Quote Dispatcher</div>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Scheduled automation system that fetches content and dispatches personalized emails to active subscribers.</p>
+        <div class="tags" style="margin-top: 10px;">
+          <span class="tag">Cron Trigger</span><span class="tag">AI-Generated Content</span><span class="tag">Airtable Subscriber Data</span><span class="tag">Gmail</span><span class="tag">Scheduled Automation</span>
+        </div>
+        <div class="why-matters">
+          <strong>Why it matters:</strong> Demonstrates scheduled automation, data retrieval, personalization, and automated communication.
+        </div>
+      </div>
+    </section>
 
-            <!-- Project 4 -->
-            <div class="project-card">
-                <h3>4. Student Grade & Performance Analyzer</h3>
-                <p>A structured Python script that accepts student details and subject marks. It features input validation using `try-except` blocks to prevent negative or invalid inputs, calculates average scores, determines letter grades, and outputs a clean text summary.</p>
-                <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Exception Handling</span>
-                    <span class="tag">CLI</span>
-                </div>
-            </div>
+    <!-- 5. SECONDARY PROJECTS -->
+    <section>
+      <h2>Secondary Projects</h2>
+      <div class="secondary-grid">
 
-            <!-- Project 5 -->
-            <div class="project-card">
-                <h3>5. File-Based CLI Password Vault</h3>
-                <p>A command-line security tool in Python for storing and retrieving account credentials. It utilizes native file handling (`open/write/read`) to store data in local text files while handling file-access errors using `try-except` blocks.</p>
-                <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">File Handling</span>
-                    <span class="tag">CLI</span>
-                </div>
-            </div>
+        <!-- Project 04 -->
+        <div class="card">
+          <div class="project-num">Project 04</div>
+          <div class="project-title" style="font-size: 1.1rem;">Student Grade & Performance Analyzer</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Python CLI script that validates score inputs and calculates student metrics.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">Input Validation</span><span class="tag">try/except</span><span class="tag">Calculations</span><span class="tag">CLI Output</span>
+          </div>
+        </div>
 
-            <!-- Project 6 -->
-            <div class="project-card">
-                <h3>6. StudyHub Educational Web Portal</h3>
-                <p>A multi-section responsive landing page built with HTML and CSS. Features a structured layout, navigation header, subject listing, pricing table, custom typography via Google Fonts, and a functional contact layout.</p>
-                <div class="tags">
-                    <span class="tag">HTML5</span>
-                    <span class="tag">CSS3</span>
-                    <span class="tag">Web Design</span>
-                </div>
-            </div>
+        <!-- Project 05 -->
+        <div class="card">
+          <div class="project-num">Project 05</div>
+          <div class="project-title" style="font-size: 1.1rem;">File-Based CLI Password Vault</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Python file-handling project demonstrating local data storage and error handling.</p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">File Handling</span><span class="tag">Local Data Storage</span><span class="tag">Error Handling</span>
+          </div>
+        </div>
 
-            <!-- Project 7 -->
-            <div class="project-card">
-                <h3>7. Developer Profile UI Card Component</h3>
-                <p>A clean UI component built using HTML and custom CSS to display developer details. Demonstrates box model styling, border-radius, outline offsets, text-shadows, and box-shadow styling.</p>
-                <div class="tags">
-                    <span class="tag">HTML5</span>
-                    <span class="tag">CSS3</span>
-                    <span class="tag">UI Design</span>
-                </div>
-            </div>
+        <!-- Project 06 -->
+        <div class="card">
+          <div class="project-num">Project 06</div>
+          <div class="project-title" style="font-size: 1.1rem;">StudyHub Educational Web Portal</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">Structured educational web interface focusing on layout and typography.</p>
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive Layout</span><span class="tag">Navigation</span><span class="tag">Typography</span>
+          </div>
+        </div>
 
-        </section>
+        <!-- Project 07 -->
+        <div class="card">
+          <div class="project-num">Project 07</div>
+          <div class="project-title" style="font-size: 1.1rem;">Developer Profile UI Card Component</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px;">UI component project demonstrating core CSS layout styling.</p>
+          <div class="tags">
+            <span class="tag">CSS Box Model</span><span class="tag">border-radius</span><span class="tag">Shadows</span><span class="tag">Outlines</span><span class="tag">Typography</span>
+          </div>
+        </div>
 
-        <!-- Footer -->
-        <footer>
-            <p>© 2026 Muhammad Ayan Atif | Built with HTML & CSS</p>
-        </footer>
-    </div>
+      </div>
+    </section>
+
+    <!-- 6. MY APPROACH -->
+    <section>
+      <h2>My Approach</h2>
+      <div class="card">
+        <p style="font-weight: bold; color: var(--accent); margin-bottom: 5px;">"Learn → Build → Test → Improve"</p>
+        <p style="font-size: 0.95rem; color: var(--text-muted);">I prefer learning concepts by turning them into working projects. Each project is an opportunity to understand the underlying logic, test edge cases, and improve the implementation.</p>
+      </div>
+    </section>
+
+    <!-- 7. GENERAL SECRETARY CONNECTION -->
+    <section style="margin-bottom: 60px;">
+      <h2>Why Technology + Organization?</h2>
+      <div class="quote-box">
+        <p style="color: var(--text);">"I'm interested not only in building technology, but also in using it to organize information, automate repetitive processes, and make systems easier to manage."</p>
+      </div>
+    </section>
+
+  </div>
 
 </body>
 </html>

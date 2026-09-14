@@ -31,5 +31,5 @@ A curated showcase of full-stack web components, custom Python applications, and
 
 ## 📌 Links & Live Previews
 
-* **Live Portfolio Website:** [View Portfolio](https://muhammad-ayan288.github.io/Portfolio-)
+
 * **GitHub Profile:** [@Muhammad-Ayan288](https://github.com/Muhammad-Ayan288)
